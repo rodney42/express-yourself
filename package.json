@@ -1,0 +1,18 @@
+{
+  "name": "express-selfapi",
+  "version": "0.0.1",
+  "description": "Express REST api self describing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express",
+    "rest"
+  ],
+  "author": "Frank Klingebiel",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
