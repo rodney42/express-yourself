@@ -1,7 +1,4 @@
 var registry = []
-
-
-
 exports.registry = registry;
 exports.use = function(app,def) {
   registerDefinition(app,{
