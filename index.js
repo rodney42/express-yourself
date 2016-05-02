@@ -5,8 +5,9 @@ var rgb_query_parameter = {
   b : { type : "INT", default: 0, description : "Blue color part"}
 };
 
+// Example definition
 var def = {
-  blink : {
+  blink : 
     path: "blink/:id",
     description : "Let the LEDs blink service.",
     parameter : {
@@ -44,8 +45,8 @@ function echo( req, res ) {
 }
 
 var express     = require('express');
+var api = require('./express-yourself.js');
 var app = express();
-var api = require('./express-selfapi.js');
 
 api.use(app, def);
 
@@ -53,14 +54,4 @@ app.listen(3000, function () {
   console.log('Self api app listening on port 3000!');
 });
 
-
-/*function show(s) {
-  if( s ) {
-    for( var p in s ) {
-      console.log('propery : '+p+" "+s[p] );
-    }
-  } else {
-      console.log('--undefined');
-  }
-}
 */

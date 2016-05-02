@@ -1,5 +1,12 @@
 var registry = []
 exports.registry = registry;
+
+/**
+ * Register a definition.
+ *
+ * @param app  The express application.
+ * @param def  The api definition.
+ */
 exports.use = function(app,def) {
   registerDefinition(app,{
     _registry : {
@@ -18,6 +25,12 @@ exports.use = function(app,def) {
   registerDefinition(app,def);
 }
 
+/**
+ * Register a definition.
+ *
+ * @param app  The express application.
+ * @param def  The api definition.
+ */
 function registerDefinition(app,def) {
   for( var service in def ) {
 
@@ -48,6 +61,12 @@ function registerDefinition(app,def) {
   }
 }
 
+/**
+ * Register a endpint.
+ *
+ * @param app  The express application.
+ * @param def  The api definition.
+ */
 function registerEndpoint(app,def) {
 
   if( !def.endpoint.use ) {
