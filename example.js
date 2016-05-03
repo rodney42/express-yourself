@@ -7,7 +7,7 @@ var rgb_query_parameter = {
 
 // Example definition
 var def = {
-  blink : 
+  blink: {
     path: "blink/:id",
     description : "Let the LEDs blink service.",
     parameter : {
@@ -53,5 +53,3 @@ api.use(app, def);
 app.listen(3000, function () {
   console.log('Self api app listening on port 3000!');
 });
-
-*/
