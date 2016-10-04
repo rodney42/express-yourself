@@ -44,7 +44,7 @@ function echo( req, res ) {
   res.send( req.endpoint );
 }
 
-var express     = require('express');
+var express = require('express');
 var api = require('./express-yourself.js');
 var app = express();
 
