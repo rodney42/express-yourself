@@ -45,7 +45,7 @@ function echo( req, res ) {
 }
 
 var express = require('express');
-var api = require('./express-yourself.js');
+var api = require('./node-express-yourself.js');
 var app = express();
 
 api.use(app, def);
