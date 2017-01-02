@@ -103,11 +103,17 @@ function registerEndpoint(app,def) {
   }
   console.log('registered endpoint : '+endpointDefinition.method+' '+endpointDefinition.fullpath+' uses '+def.endpoint.use.name);
 
-  app.get( endpointDefinition.fullpath, function(req, res)  {
-    req.endpoint = endpointDefinition;
-    def.endpoint.use(req, res);
-  });
-
+  if( endpointDefinition.method == 'POST' ) {
+    app.post( endpointDefinition.fullpath, function(req, res)  {
+      req.endpoint = endpointDefinition;
+      def.endpoint.use(req, res);
+    });
+  } else {
+    app.get( endpointDefinition.fullpath, function(req, res)  {
+      req.endpoint = endpointDefinition;
+      def.endpoint.use(req, res);
+    });
+  }
   return endpointDefinition;
 
 };
